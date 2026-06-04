@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>localtify — local music made cute</title>
+  <meta
+    name="description"
+    content="localtify is a polished desktop music player for local files, playlists, downloads, pixel covers, themes, Discord Rich Presence, and smooth offline playback."
+  />
+  <meta name="theme-color" content="#fcf6ef" />
+  <meta property="og:title" content="localtify — local music made cute" />
+  <meta property="og:description" content="A polished desktop music player for your own local library." />
+  <meta property="og:type" content="website" />
+  <link rel="preload" as="image" href="./assets/art.png" />
+  <link rel="preload" as="image" href="./assets/yukari.png" />
+  <link rel="preload" as="image" href="./showcase/hero.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="scrollProgress" id="scrollProgress" aria-hidden="true"></div>
+
+  <main class="siteShell">
+    <section class="heroCard revealBlock" aria-label="localtify intro">
+      <div class="heroBackground" aria-hidden="true">
+        <span class="gridWash"></span>
+        <span class="cutPanel"></span>
+        <span class="sparkle sparkleOne">✦</span>
+        <span class="sparkle sparkleTwo">✧</span>
+        <span class="sparkle sparkleThree">♡</span>
+        <span class="noteCluster clusterOne">♪</span>
+        <span class="noteCluster clusterTwo">♫</span>
+        <span class="noteCluster clusterThree">♩</span>
+        <span class="scribbleLoop loopOne"></span>
+        <span class="scribbleLoop loopTwo"></span>
+        <span class="tinySticker stickerOne">real app ♡</span>
+        <span class="releaseRibbon">0.3.6 release build</span>
+      </div>
+
+      <div class="heroCopy">
+        <p class="kicker">desktop music player</p>
+
+        <h1 class="heroTitle">
+          <span>local</span>
+          <span>music</span>
+          <span>made cute.</span>
+        </h1>
+
+        <p class="cleanLine">
+          local files · real library · no streaming clone
+        </p>
+
+        <p class="heroText">
+          <strong>localtify turns the songs already on your PC into a proper music library</strong> —
+          with playlists, downloads, cover art, themes, Discord presence, and smooth offline playback.
+        </p>
+
+        <div class="heroActions" aria-label="Primary actions">
+          <a class="button primary heroDownload rainbowOutline" href="https://github.com/meshahid973/localitfy/releases" target="_blank" rel="noreferrer">
+            Download for Windows
+            <span>↗</span>
+          </a>
+          <a class="button secondary" href="https://github.com/meshahid973/localitfy" target="_blank" rel="noreferrer">
+            GitHub
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="heroNote" aria-label="tagline">
+        your library,<br />
+        but less boring
+        <span>♡</span>
+      </aside>
+
+      <figure class="heroArt">
+        <img src="./assets/art.png" alt="Localtify character artwork" width="620" height="660" loading="eager" decoding="async" />
+      </figure>
+    </section>
+
+    <section class="screensSection revealBlock" aria-labelledby="screens-title">
+      <div class="screensIntro">
+        <div class="introCopy">
+          <p class="sectionKicker">real app screenshots</p>
+          <h2 id="screens-title">Your library, finally pretty.</h2>
+          <p class="introLead">
+            Browse the real Localtify build — <strong>home, playlists, downloads, and settings</strong> —
+            with the same soft desktop polish users see inside the app.
+          </p>
+        </div>
+      </div>
+
+      <div class="screensLayout">
+        <span class="scribbleArrow selectorArrow" aria-hidden="true"></span>
+        <div class="screenshotFrame">
+          <img
+            id="showcaseImage"
+            src="./showcase/hero.png"
+            alt="Localtify home and library screenshot"
+            loading="eager"
+            decoding="async"
+          />
+          <div class="screenCaption" id="screenCaption">Home / library</div>
+        </div>
+
+        <div class="screenSelector" aria-label="Screenshot selector">
+          <button class="screenButton active" type="button" data-shot="./showcase/hero.png" data-caption="Home / library" data-alt="Localtify home and library screenshot">
+            <span>01</span>
+            <strong>Home / library</strong>
+            <small>large music grid, recent covers, and clean local library flow</small>
+          </button>
+
+          <button class="screenButton" type="button" data-shot="./showcase/playlists.png" data-caption="Playlists" data-alt="Localtify playlist screenshot">
+            <span>02</span>
+            <strong>Playlists</strong>
+            <small>liked songs, queues, reorder flow, and Spotify-style organization</small>
+          </button>
+
+          <button class="screenButton" type="button" data-shot="./showcase/downloads.png" data-caption="Downloads" data-alt="Localtify downloads screenshot">
+            <span>03</span>
+            <strong>Downloads</strong>
+            <small>YouTube downloads and Spotify playlist importing in one tab</small>
+          </button>
+
+          <button class="screenButton" type="button" data-shot="./showcase/settings.png" data-caption="Settings" data-alt="Localtify settings screenshot">
+            <span>04</span>
+            <strong>Settings</strong>
+            <small>themes, Discord presence, visual controls, and update polish</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="releaseSection revealBlock" aria-label="release highlights">
+      <article class="releaseCard">
+        <div class="releaseText">
+          <p class="sectionKicker">finally completed</p>
+          <h2>Test out my local music player.</h2>
+          <p>
+            Localtify was built after months of <strong>bug fixes, performance work, UI cleanup,
+            cover polish, playlist fixes, and update-screen improvements.</strong>
+          </p>
+        </div>
+
+        <ul class="releaseList">
+          <li><span>local files</span> music for downloaded and imported songs</li>
+          <li><span>library</span> playlists, liked songs, queue, shuffle, repeat</li>
+          <li><span>downloads</span> YouTube and Spotify playlist download workflow</li>
+          <li><span>covers</span> pixel art covers, custom covers, gallery, randomizer</li>
+          <li><span>discord</span> Rich Presence with privacy and visual settings</li>
+          <li><span>updates</span> smoother release popup and installer flow</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="featureSection revealBlock" aria-labelledby="features-title">
+      <div class="sectionHeader compact">
+        <div>
+          <p class="sectionKicker">main features</p>
+          <h2 id="features-title">Made for your own library.</h2>
+          <p class="headerText">
+            Everything is built around making local music feel modern, personal, and smooth.
+          </p>
+        </div>
+      </div>
+
+      <div class="featureGrid">
+        <article class="featureCard big">
+          <p>01</p>
+          <h3>Local playback first</h3>
+          <span>
+            Built around real files on your PC, saved metadata, offline playback,
+            and a library that does not feel old or boring.
+          </span>
+        </article>
+
+        <article class="featureCard">
+          <p>02</p>
+          <h3>Playlist flow</h3>
+          <span>
+            Create playlists, use liked songs, manage queues, shuffle, repeat,
+            and keep your collection organized.
+          </span>
+        </article>
+
+        <article class="featureCard">
+          <p>03</p>
+          <h3>Download tab</h3>
+          <span>
+            Add songs faster with the app’s YouTube download and Spotify playlist
+            importing/downloading workflow.
+          </span>
+        </article>
+
+        <article class="featureCard">
+          <p>04</p>
+          <h3>Cover system</h3>
+          <span>
+            Pixel art covers, custom album covers, cover gallery, and cover randomizer
+            support for a more personal library.
+          </span>
+        </article>
+
+        <article class="featureCard">
+          <p>05</p>
+          <h3>Discord presence</h3>
+          <span>
+            Show “Listening to localtify” with privacy controls, paused status,
+            buttons, and artwork settings.
+          </span>
+        </article>
+
+        <article class="featureCard">
+          <p>06</p>
+          <h3>Visual settings</h3>
+          <span>
+            OLED dark UI, smooth motion, themes, sidebar options, update polish,
+            and cleaner user-facing controls.
+          </span>
+        </article>
+      </div>
+    </section>
+
+    <section class="downloadSection revealBlock" aria-labelledby="download-title">
+      <article class="downloadCard">
+                <figure class="peekMascot" aria-hidden="true">
+          <img src="./assets/yukari.png" alt="" loading="lazy" decoding="async" />
+        </figure>
+        <div class="downloadCopy">
+          <p class="sectionKicker">open source release</p>
+          <h2 id="download-title">Download localtify and test it.</h2>
+          <p>
+            Try the latest build, report bugs, and check the source on GitHub.
+            <strong>Your local music library deserves something nicer than the default player.</strong>
+          </p>
+        </div>
+
+        <div class="downloadPanel ambiencePanel" aria-label="download localtify">
+          <p class="downloadHint">ready to listen?</p>
+          <a class="downloadPrimary rainbowOutline" href="https://github.com/meshahid973/localitfy/releases" target="_blank" rel="noreferrer">
+            <span>Download for Windows</span>
+            <strong>latest GitHub release ↗</strong>
+          </a>
+          <a class="downloadSecondary" href="https://github.com/meshahid973/localitfy/issues" target="_blank" rel="noreferrer">
+            Report an issue →
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="miniCoverStripSection revealBlock" aria-label="pixel cover strip">
+      <div class="miniCoverStrip">
+        <p class="sectionKicker">pixel cover strip</p>
+        <div class="coverRow">
+          <span class="coverChip chipOne"></span>
+          <span class="coverChip chipTwo"></span>
+          <span class="coverChip chipThree"></span>
+          <span class="coverChip chipFour"></span>
+          <span class="coverChip chipFive"></span>
+          <span class="coverChip chipSix"></span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="siteFooter revealBlock">
+      <span>localtify · local music made cute</span>
+      <a href="https://github.com/meshahid973/localitfy" target="_blank" rel="noreferrer">source on GitHub ↗</a>
+    </footer>
+  </main>
+
+  <script>
+    const showcaseImage = document.getElementById("showcaseImage");
+    const screenCaption = document.getElementById("screenCaption");
+    const screenButtons = Array.from(document.querySelectorAll(".screenButton"));
+    const scrollProgress = document.getElementById("scrollProgress");
+    const hoverItems = Array.from(document.querySelectorAll(".button, .screenButton, .featureCard, .downloadPrimary, .downloadSecondary"));
+    const revealBlocks = Array.from(document.querySelectorAll(".revealBlock"));
+
+    const showcaseSources = screenButtons
+      .map((button) => button.dataset.shot)
+      .filter(Boolean);
+
+    function preloadScreenshots() {
+      showcaseSources.forEach((src) => {
+        const image = new Image();
+        image.decoding = "async";
+        image.src = src;
+      });
+    }
+
+    function activateScreenshot(button) {
+      if (!showcaseImage || !button) return;
+
+      const nextSrc = button.dataset.shot;
+      const nextAlt = button.dataset.alt || "Localtify app screenshot";
+      const nextCaption = button.dataset.caption || "Localtify";
+      if (!nextSrc || showcaseImage.getAttribute("src") === nextSrc) return;
+
+      screenButtons.forEach((item) => {
+        item.classList.toggle("active", item === button);
+      });
+
+      showcaseImage.classList.add("isChanging");
+
+      window.setTimeout(() => {
+        showcaseImage.src = nextSrc;
+        showcaseImage.alt = nextAlt;
+        if (screenCaption) screenCaption.textContent = nextCaption;
+      }, 170);
+    }
+
+    function setupScreenshotControls() {
+      screenButtons.forEach((button) => {
+        button.addEventListener("click", () => activateScreenshot(button));
+      });
+
+      if (showcaseImage) {
+        showcaseImage.addEventListener("load", () => {
+          showcaseImage.classList.remove("isChanging");
+        });
+      }
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+
+        const activeIndex = Math.max(0, screenButtons.findIndex((button) => button.classList.contains("active")));
+        const offset = event.key === "ArrowRight" ? 1 : -1;
+        const nextIndex = (activeIndex + offset + screenButtons.length) % screenButtons.length;
+        activateScreenshot(screenButtons[nextIndex]);
+      });
+    }
+
+    function setupHoverMotion() {
+      let frame = 0;
+      let latestEvent = null;
+      let latestItem = null;
+
+      function updateHover() {
+        frame = 0;
+        if (!latestEvent || !latestItem) return;
+
+        const rect = latestItem.getBoundingClientRect();
+        const x = ((latestEvent.clientX - rect.left) / rect.width - 0.5) * 2;
+        const y = ((latestEvent.clientY - rect.top) / rect.height - 0.5) * 2;
+
+        latestItem.style.setProperty("--hover-x", x.toFixed(3));
+        latestItem.style.setProperty("--hover-y", y.toFixed(3));
+      }
+
+      hoverItems.forEach((item) => {
+        item.addEventListener("pointermove", (event) => {
+          latestEvent = event;
+          latestItem = item;
+          if (!frame) frame = window.requestAnimationFrame(updateHover);
+        });
+
+        item.addEventListener("pointerleave", () => {
+          item.style.setProperty("--hover-x", "0");
+          item.style.setProperty("--hover-y", "0");
+        });
+      });
+    }
+
+    function setupReveal() {
+      if (!("IntersectionObserver" in window)) {
+        revealBlocks.forEach((block) => block.classList.add("isVisible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("isVisible");
+            observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.14, rootMargin: "0px 0px -10% 0px" }
+      );
+
+      revealBlocks.forEach((block) => observer.observe(block));
+    }
+
+    function setupScrollProgress() {
+      let frame = 0;
+
+      function update() {
+        frame = 0;
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = max > 0 ? window.scrollY / max : 0;
+        if (scrollProgress) {
+          scrollProgress.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
+        }
+      }
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!frame) frame = window.requestAnimationFrame(update);
+        },
+        { passive: true }
+      );
+
+      update();
+    }
+
+    preloadScreenshots();
+    setupScreenshotControls();
+    setupHoverMotion();
+    setupReveal();
+    setupScrollProgress();
+  </script>
+</body>
+</html>
